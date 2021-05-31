@@ -7,7 +7,6 @@ module.exports.run = async (bot, message) => {
   serverinfo.findOne({ serverID: message.guild.id }, (err, data) => {
     if (err) console.log(err);
     let Cooldown = data.serverSettings.replyCooldown;
-    console.log(Cooldown)
 
     try {
       if (data.serverSettings.reply === true && !talkedRecently.has(message.author.id)) {

@@ -6,3 +6,7 @@ data.json
 commands/Admin Mode.js
 commands/Darlingmove.js
 commands/darlingp.js
+commands/DarlingCommands/darlingp.js
+commands/DarlingCommands/Darlingmove.js
+commands/DarlingCommands/Admin Mode.js
+commands/DarlingCommands/test.js

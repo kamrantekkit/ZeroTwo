@@ -1,12 +1,16 @@
 const Discord = require("discord.js");
 const mongoose = require("mongoose");
-const { bulkWrite } = require("../dataModels/serverSchema.js");
-const serverinfo = require("../dataModels/serverSchema.js");
+const { bulkWrite } = require("../../dataModels/serverSchema.js");
+const serverinfo = require("../../dataModels/serverSchema.js");
 
 
 
 module.exports.run = async (bot, message, args) => {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Insufficent Permissions");
+  let darling = !(message.member.id === "317539711067357185");
+  let admin = !(message.member.hasPermission("ADMINISTRATOR"));
+  console.log(darling)
+  console.log(admin)
+  if (admin && darling) return message.channel.send("Insufficent Permissions");
 
   let guildID = message.guild.id;
   let channel = message.channel;

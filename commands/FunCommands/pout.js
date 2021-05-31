@@ -8,12 +8,14 @@ module.exports.run = async (bot, message, args) => {
 
   let EUser = message.author
 
-  let botembed = new Discord.RichEmbed()
+  let botembed = new Discord.MessageEmbed()
   .setColor("#ff0fef")
   .setDescription(`${EUser} pouts`)
   .setImage(randomImages) 
 
   message.channel.send(botembed);
+
+  console.log("this is running")
 }
 
     

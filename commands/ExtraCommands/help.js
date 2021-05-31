@@ -1,8 +1,9 @@
 const Discord = require("discord.js");
-const botconfig = require("../config.json");
+const botconfig = require("../../config.json");
 
 
 module.exports.run = async (bot, message, args, data) => {
+
   let store = []
   await data.forEach(element => store.push(`**${botconfig.prefix}**` + element))
   const half = Math.ceil(store.length / 2);
